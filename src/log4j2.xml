@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <Appenders>
+        <Console name="ConsoleResult" target="SYSTEM_OUT">
+            <!--ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"-->
+            <!-- Flow tracing is most useful with a pattern that shows location.
+                 Below pattern outputs class, line number and method name. -->
+            <PatternLayout pattern="%msg%xEx%n"/>
+        </Console>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </Console>>
+        <File name="all" fileName="logs/all.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="edu.vanderbilt.vudoc.test" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="edu.vanderbilt.vudoc.test.EdgeBroker" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="edu.vanderbilt.vudoc.test.Publisher" level="info" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="edu.vanderbilt.vudoc.test.Subscriber" level="error" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="TestResult" level="info" additivity="false">
+            <AppenderRef ref="ConsoleResult"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="all"/>
+        </Root>
+    </Loggers>
+</Configuration>

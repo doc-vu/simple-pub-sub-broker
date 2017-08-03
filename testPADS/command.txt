@@ -1,0 +1,15 @@
+
+h2  sh ./runPub.sh 10.0.0.10  &> ./result/h2PublisherApp2.log &
+
+h1  sh ./runBroker.sh  &> ./result/h1BrokerApp1.log &
+
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp1.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp2.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp3.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp4.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp5.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp6.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp7.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp8.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp9.log &
+h3  sh ./runSub.sh 10.0.0.10  &> ./result/h3SubsriberApp10.log &
