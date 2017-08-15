@@ -1,0 +1,3 @@
+h1 sh runPub.sh 10.0.0.2&> ./result/h1PublisherApp11.log &
+h2 sh runBroker.sh &> ./result/h2BrokerApp1.log &
+h1 sh runSub.sh 10.0.0.2&> ./result/h1SubsriberApp1.log &
